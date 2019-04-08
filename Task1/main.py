@@ -1,13 +1,14 @@
 import nltk
-from os import walk
+import os
 
 mypath = "../WikipediaArticles"
-f = []
-for (dirpath, dirnames, filenames) in walk(mypath):
-    f.extend(filenames)
-    file = read(dirnames, "r")
+
+files = os.listdir(mypath)
+print(files)
+
+for i in range(len(files)):
+    file = mypath + "/" + files[i]
     print(file)
-    break
-
-print(f)
-
+    f = open(file, encoding="utf8")
+    content = f.read()
+    print(content)
