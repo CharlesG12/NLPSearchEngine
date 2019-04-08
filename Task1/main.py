@@ -1,5 +1,6 @@
 import os
 from nltk.stem import WordNetLemmatizer
+from nltk.parse.corenlp import CoreNLPParser
 import nltk
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
@@ -31,6 +32,9 @@ for i in range(1):
             lemmatizes.append(lemma)
 
         tagged = nltk.pos_tag(lemmatizes)
+        parser = CoreNLPParser(url='http://localhost:9000')
+        next(parser.raw_parse(sentences[i])).pretty_print()
+
         print("TOKENS:   ")
         print(tokens)
         print()
