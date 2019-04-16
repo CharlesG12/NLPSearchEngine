@@ -22,18 +22,18 @@ for i in range(1):
     content = f.read()
     # print(content)
     sentences = nltk.sent_tokenize(content)
-    for i in range(len(sentences)):
+    for k in range(len(sentences)):
         # print(sentences[i])
         # print()
-        tokens = nltk.word_tokenize(sentences[i])
+        tokens = nltk.word_tokenize(sentences[k])
         lemmatizer = WordNetLemmatizer()
         lemmatizes = []
         for j in range(len(tokens)):
             lemma = lemmatizer.lemmatize(tokens[j])
             lemmatizes.append(lemma)
             for synset in wn.synsets(lemma):
-                print(synset)
                 print()
+                print(synset)
                 nyms = ['hypernyms', 'hyponyms', 'part_meronyms', 'part_holonyms']
                 for n in nyms:
                     try:
