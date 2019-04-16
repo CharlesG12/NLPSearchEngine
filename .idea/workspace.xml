@@ -2,9 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c32c36d-c1af-4e2d-a33c-45405edfbda7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/FeatureExtrator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WikipediaArticles/AT_T.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WikipediaArticles/Amazon_com.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WikipediaArticles/Berkshire_Hathaway.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WikipediaArticles/China.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WikipediaArticles/ExxonMobil.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WikipediaArticles/India.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WikipediaArticles/LaurenePowellJobs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WikipediaArticles/MelindaGates.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WikipediaArticles/OprahWinfrey.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WikipediaArticles/Rchardson_Texas.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WikipediaArticles/UTD.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WikipediaArticles/Walmart.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WikipediaArticles/WarrenBuffet.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WikipediaArticles/Washington_DC.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WikipediaArticles/Washington_State.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task1/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FeatureExtrator.py" beforeDir="false" afterPath="$PROJECT_DIR$/FeatureExtrator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,35 +28,22 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/main.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="459">
-                    <caret line="39" column="41" lean-forward="true" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
-                    <folding>
-                      <element signature="e#0#9#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FeatureExtrator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="46" selection-end-column="57" />
+            <state relative-caret-position="136">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -56,6 +59,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>'</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -181,13 +189,13 @@
     <frame x="146" y="0" width="1018" height="1046" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1942231" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1942231" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.23240939" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39872068" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29104477" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.23773988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -205,11 +213,21 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/FeatureExtrator.py</url>
-          <line>83</line>
+          <line>102</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/FeatureExtrator.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="extractor.info['AbrahamLincoln.txt']['token']" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -278,18 +296,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="39" column="41" lean-forward="true" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FeatureExtrator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="46" selection-end-column="57" />
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
