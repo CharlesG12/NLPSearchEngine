@@ -1,0 +1,3 @@
+Exact Answer: IBM, and Motorola
+Supporting Sentence: In 1994, Apple, IBM, and Motorola formed the AIM alliance with the goal of creating a new computing platform (the PowerPC Reference Platform), which would use IBM and Motorola hardware coupled with Apple software.
+Supporting Article: AppleInc.txt

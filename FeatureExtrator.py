@@ -1,8 +1,11 @@
 import os
+import re
 import nltk
+import json
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet as wn
 from nltk.parse.corenlp import CoreNLPParser
+from nltk.tokenize import RegexpTokenizer
 from pprint import pprint
 
 
@@ -11,50 +14,74 @@ class FeatureExtractor:
     files = []
     info = {}
 
-    def __init__(self, _path):
+    def __init__(self, _path=None):
         self.path = _path
 
-    def write(self):
-        for article, value in self.info.items():
-            print()
-
-    def read_files(self):
-        self.files = os.listdir(self.path)
+    def run(self):
+        files_name = os.listdir(self.path)
 
         for i in range(1):
-            current_file = self.path + "/" + self.files[i]
+            current_file = self.path + "/" + files_name[i]
             # print(current_file)
-            _tuple = self.read_file(current_file)
-            self.info[self.files[i]] = _tuple
+            _tuple = self.read_file(files_name[i].replace(".txt", ""), current_file)
+            self.info[files_name[i]] = _tuple
+        return self.info
 
-    def read_file(self, _file):
+    def read_file(self, name, _file):
+        self.make_dir("info")
         f = open(_file, encoding="utf8")
         current_content = f.read()
+        self.files.append(current_content)
         # print(current_content)
         sentences = nltk.sent_tokenize(current_content)
-        return self.run(sentences)
 
-    def run(self, _sentences):
+        return self.run_article(name, sentences)
+
+    def run_article(self, _name, _sentences):
+        print("processing {}".format(_name))
         dict_token = {}
         dict_lemma = {}
         dict_tag = {}
         dict_parser = {}
         dict_wordnet = {}
-        # for j in range(len(_sentences)):
-        for j in range(20):
+        tokenizer = RegexpTokenizer('\s+', gaps=True)
+        for j in range(len(_sentences)):
+            sent = self.clean_sentence(_sentences[j])
+
             print("processing tokens")
-            dict_token[j] = nltk.word_tokenize(_sentences[j])
+            dict_token[j] = tokenizer.tokenize(sent)
             print("processing lemma")
             dict_lemma[j] = self.lemma_generator(dict_token[j])
             print("processing tagging")
             dict_tag[j] = nltk.pos_tag(dict_lemma[j])
-            print("processing parsering")
-            dict_parser[j] = self.parser_generator(dict_lemma[j])
+            # print("processing parsering")
+            # dict_parser[j] = self.parser_generator(dict_lemma[j])
             # self.print_parser(dict_parser[j])
             print("processing sysnet")
             self.sysnet_generator(dict_lemma[j], dict_wordnet)
+        self.write("info/token/", _name, dict_token)
+        self.write("info/lemma/", _name, dict_lemma)
+        self.write("info/tag/", _name, dict_tag)
+        # self.write("info/parser/", _name, dict_parser)
+        self.write("info/sysnet/", _name, dict_wordnet)
         return {"token": dict_token, "lemma": dict_lemma, "tag": dict_tag,
                 "parser": dict_parser, "wordnet_feather": dict_wordnet}
+
+    def write(self, directory, filename, data):
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+        with open(directory + filename + '.json', 'w') as fp:
+            json.dump(data, fp)
+
+    @staticmethod
+    def clean_sentence(sentence):
+        x = re.sub(r'(\n)', " ", sentence)
+        return x.replace("\\", "")
+
+    @staticmethod
+    def make_dir(directory):
+        if not os.path.exists(directory):
+            os.makedirs(directory)
 
     @staticmethod
     def lemma_generator(_tokens):
@@ -97,7 +124,7 @@ class FeatureExtractor:
 
 
 if __name__ == "__main__":
-    extractor = FeatherExtractor("WikipediaArticles")
-    extractor.read_files()
+    extractor = FeatureExtractor("WikipediaArticles")
+    extractor.run()
     # extractor.write()
     print()
